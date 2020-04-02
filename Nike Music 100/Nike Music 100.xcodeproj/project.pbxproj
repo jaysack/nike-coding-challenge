@@ -12,6 +12,8 @@
 		E617AD9D243623FC009D91BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617AD9C243623FC009D91BF /* HomeViewController.swift */; };
 		E617ADA224362400009D91BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E617ADA124362400009D91BF /* Assets.xcassets */; };
 		E617ADA524362400009D91BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E617ADA324362400009D91BF /* LaunchScreen.storyboard */; };
+		E617ADB824362B93009D91BF /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADB724362B93009D91BF /* Album.swift */; };
+		E617ADBA24362E57009D91BF /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADB924362E57009D91BF /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E617ADA124362400009D91BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E617ADA424362400009D91BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E617ADA624362400009D91BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E617ADB724362B93009D91BF /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		E617ADB924362E57009D91BF /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		E617ADB02436242A009D91BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E617ADB724362B93009D91BF /* Album.swift */,
+				E617ADB924362E57009D91BF /* Genre.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +231,8 @@
 				E617AD9D243623FC009D91BF /* HomeViewController.swift in Sources */,
 				E617AD99243623FC009D91BF /* AppDelegate.swift in Sources */,
 				E617AD9B243623FC009D91BF /* SceneDelegate.swift in Sources */,
+				E617ADB824362B93009D91BF /* Album.swift in Sources */,
+				E617ADBA24362E57009D91BF /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
