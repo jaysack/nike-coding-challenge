@@ -14,6 +14,11 @@
 		E617ADA524362400009D91BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E617ADA324362400009D91BF /* LaunchScreen.storyboard */; };
 		E617ADB824362B93009D91BF /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADB724362B93009D91BF /* Album.swift */; };
 		E617ADBA24362E57009D91BF /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADB924362E57009D91BF /* Genre.swift */; };
+		E617ADBC24363457009D91BF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADBB24363457009D91BF /* NetworkManager.swift */; };
+		E617ADBF243635DC009D91BF /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADBE243635DC009D91BF /* URLRequest+Extension.swift */; };
+		E617ADC22436366C009D91BF /* AlbumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC12436366C009D91BF /* AlbumType.swift */; };
+		E617ADC424363D0F009D91BF /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC324363D0F009D91BF /* Feed.swift */; };
+		E617ADC624363D60009D91BF /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC524363D60009D91BF /* FeedResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		E617ADA624362400009D91BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E617ADB724362B93009D91BF /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		E617ADB924362E57009D91BF /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		E617ADBB24363457009D91BF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E617ADBE243635DC009D91BF /* URLRequest+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		E617ADC12436366C009D91BF /* AlbumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumType.swift; sourceTree = "<group>"; };
+		E617ADC324363D0F009D91BF /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		E617ADC524363D60009D91BF /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +68,7 @@
 		E617AD97243623FC009D91BF /* Nike Music 100 */ = {
 			isa = PBXGroup;
 			children = (
-				E617ADB02436242A009D91BF /* Models */,
+				E617ADB02436242A009D91BF /* Model */,
 				E617ADAF24362425009D91BF /* UI */,
 				E617ADAE24362420009D91BF /* Services */,
 				E617ADAD2436241B009D91BF /* Utilities */,
@@ -81,6 +91,8 @@
 		E617ADAD2436241B009D91BF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E617ADC024363632009D91BF /* Enum */,
+				E617ADBD243635AB009D91BF /* Extension */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -88,6 +100,7 @@
 		E617ADAE24362420009D91BF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E617ADBB24363457009D91BF /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -95,30 +108,32 @@
 		E617ADAF24362425009D91BF /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E617ADB62436266E009D91BF /* Components */,
-				E617ADB524362668009D91BF /* Views */,
-				E617ADB12436244C009D91BF /* Screens */,
+				E617ADB62436266E009D91BF /* Component */,
+				E617ADB524362668009D91BF /* View */,
+				E617ADB12436244C009D91BF /* Screen */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E617ADB02436242A009D91BF /* Models */ = {
+		E617ADB02436242A009D91BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E617ADB724362B93009D91BF /* Album.swift */,
 				E617ADB924362E57009D91BF /* Genre.swift */,
+				E617ADC324363D0F009D91BF /* Feed.swift */,
+				E617ADC524363D60009D91BF /* FeedResponse.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		E617ADB12436244C009D91BF /* Screens */ = {
+		E617ADB12436244C009D91BF /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				E617ADB224362456009D91BF /* Launch */,
 				E617ADB32436246F009D91BF /* Home */,
 				E617ADB42436247A009D91BF /* Details */,
 			);
-			path = Screens;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		E617ADB224362456009D91BF /* Launch */ = {
@@ -144,18 +159,34 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		E617ADB524362668009D91BF /* Views */ = {
+		E617ADB524362668009D91BF /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		E617ADB62436266E009D91BF /* Components */ = {
+		E617ADB62436266E009D91BF /* Component */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Components;
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E617ADBD243635AB009D91BF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E617ADBE243635DC009D91BF /* URLRequest+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E617ADC024363632009D91BF /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				E617ADC12436366C009D91BF /* AlbumType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +260,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E617AD9D243623FC009D91BF /* HomeViewController.swift in Sources */,
+				E617ADC424363D0F009D91BF /* Feed.swift in Sources */,
+				E617ADBF243635DC009D91BF /* URLRequest+Extension.swift in Sources */,
 				E617AD99243623FC009D91BF /* AppDelegate.swift in Sources */,
 				E617AD9B243623FC009D91BF /* SceneDelegate.swift in Sources */,
 				E617ADB824362B93009D91BF /* Album.swift in Sources */,
+				E617ADC624363D60009D91BF /* FeedResponse.swift in Sources */,
+				E617ADC22436366C009D91BF /* AlbumType.swift in Sources */,
+				E617ADBC24363457009D91BF /* NetworkManager.swift in Sources */,
 				E617ADBA24362E57009D91BF /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

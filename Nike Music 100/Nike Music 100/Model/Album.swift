@@ -16,7 +16,7 @@ struct Album: Decodable {
     let artist: String
     let image: String
     let releaseDate: String
-    let genre: Genre
+    let genres: [Genre]
     let copyright: String
     let url: String
     
@@ -25,7 +25,6 @@ struct Album: Decodable {
     private enum CodingKeys: String, CodingKey {
         case artist = "artistName"
         case image = "artworkUrl100"
-        case genre = "genres"
-        case id, name, releaseDate, copyright, url
+        case id, name, releaseDate, genres, copyright, url
     }
 }
