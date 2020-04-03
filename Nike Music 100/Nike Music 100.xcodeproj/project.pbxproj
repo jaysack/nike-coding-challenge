@@ -31,6 +31,10 @@
 		E617ADDB2436B7F5009D91BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADDA2436B7F5009D91BF /* CacheManager.swift */; };
 		E617ADDD2436C3D5009D91BF /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADDC2436C3D5009D91BF /* DetailAlbumViewController.swift */; };
 		E617ADDF2436C643009D91BF /* DetailViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADDE2436C643009D91BF /* DetailViewController+UI.swift */; };
+		E617ADE924378EC8009D91BF /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADE824378EC8009D91BF /* SelectionViewController.swift */; };
+		E617ADEB24379BAD009D91BF /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADEA24379BAD009D91BF /* UILabel+Extension.swift */; };
+		E617ADF024379CA7009D91BF /* DetailAlternativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADEF24379CA7009D91BF /* DetailAlternativeViewController.swift */; };
+		E617ADF224379CCC009D91BF /* DetailAlternativeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADF124379CCC009D91BF /* DetailAlternativeViewController+UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		E617ADDA2436B7F5009D91BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		E617ADDC2436C3D5009D91BF /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
 		E617ADDE2436C643009D91BF /* DetailViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewController+UI.swift"; sourceTree = "<group>"; };
+		E617ADE824378EC8009D91BF /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		E617ADEA24379BAD009D91BF /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		E617ADEF24379CA7009D91BF /* DetailAlternativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlternativeViewController.swift; sourceTree = "<group>"; };
+		E617ADF124379CCC009D91BF /* DetailAlternativeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailAlternativeViewController+UI.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 				E617ADB224362456009D91BF /* Launch */,
 				E617ADB32436246F009D91BF /* Home */,
 				E617ADB42436247A009D91BF /* Detail */,
+				E617ADE724378EAF009D91BF /* Selection */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -183,8 +192,8 @@
 		E617ADB42436247A009D91BF /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				E617ADDC2436C3D5009D91BF /* DetailAlbumViewController.swift */,
-				E617ADDE2436C643009D91BF /* DetailViewController+UI.swift */,
+				E617ADEC24379C6A009D91BF /* Original */,
+				E617ADEE24379C7E009D91BF /* Alternative */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 			children = (
 				E617ADD5243693EF009D91BF /* UIFont+Extension.swift */,
 				E617ADCD24364977009D91BF /* UIView+Extension.swift */,
+				E617ADEA24379BAD009D91BF /* UILabel+Extension.swift */,
 				E617ADC7243642FA009D91BF /* UIColor+Extension.swift */,
 				E617ADBE243635DC009D91BF /* URLRequest+Extension.swift */,
 			);
@@ -231,6 +241,32 @@
 				E617ADD82436981D009D91BF /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E617ADE724378EAF009D91BF /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				E617ADE824378EC8009D91BF /* SelectionViewController.swift */,
+			);
+			path = Selection;
+			sourceTree = "<group>";
+		};
+		E617ADEC24379C6A009D91BF /* Original */ = {
+			isa = PBXGroup;
+			children = (
+				E617ADDC2436C3D5009D91BF /* DetailAlbumViewController.swift */,
+				E617ADDE2436C643009D91BF /* DetailViewController+UI.swift */,
+			);
+			path = Original;
+			sourceTree = "<group>";
+		};
+		E617ADEE24379C7E009D91BF /* Alternative */ = {
+			isa = PBXGroup;
+			children = (
+				E617ADEF24379CA7009D91BF /* DetailAlternativeViewController.swift */,
+				E617ADF124379CCC009D91BF /* DetailAlternativeViewController+UI.swift */,
+			);
+			path = Alternative;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,14 +342,17 @@
 				E617AD9D243623FC009D91BF /* HomeViewController.swift in Sources */,
 				E617ADDD2436C3D5009D91BF /* DetailAlbumViewController.swift in Sources */,
 				E617ADC424363D0F009D91BF /* Feed.swift in Sources */,
+				E617ADE924378EC8009D91BF /* SelectionViewController.swift in Sources */,
 				E617ADBF243635DC009D91BF /* URLRequest+Extension.swift in Sources */,
 				E617ADD0243653E9009D91BF /* HomeViewController+UI.swift in Sources */,
 				E617ADD42436833B009D91BF /* AlbumTableViewCell.swift in Sources */,
 				E617ADC8243642FB009D91BF /* UIColor+Extension.swift in Sources */,
+				E617ADEB24379BAD009D91BF /* UILabel+Extension.swift in Sources */,
 				E617ADDF2436C643009D91BF /* DetailViewController+UI.swift in Sources */,
 				E617ADD6243693EF009D91BF /* UIFont+Extension.swift in Sources */,
 				E617ADCA24364552009D91BF /* GenreCollectionViewCell.swift in Sources */,
 				E617AD99243623FC009D91BF /* AppDelegate.swift in Sources */,
+				E617ADF224379CCC009D91BF /* DetailAlternativeViewController+UI.swift in Sources */,
 				E617AD9B243623FC009D91BF /* SceneDelegate.swift in Sources */,
 				E617ADB824362B93009D91BF /* Album.swift in Sources */,
 				E617ADD92436981D009D91BF /* ViewModel.swift in Sources */,
@@ -322,6 +361,7 @@
 				E617ADC624363D60009D91BF /* FeedResponse.swift in Sources */,
 				E617ADC22436366C009D91BF /* AlbumType.swift in Sources */,
 				E617ADDB2436B7F5009D91BF /* CacheManager.swift in Sources */,
+				E617ADF024379CA7009D91BF /* DetailAlternativeViewController.swift in Sources */,
 				E617ADBC24363457009D91BF /* NetworkManager.swift in Sources */,
 				E617ADCC24364662009D91BF /* NLabel.swift in Sources */,
 				E617ADBA24362E57009D91BF /* Genre.swift in Sources */,

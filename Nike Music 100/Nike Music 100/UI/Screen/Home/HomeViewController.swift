@@ -31,6 +31,7 @@ class HomeViewController: UIViewController {
 
         // Container
         configScreen()
+        addNavbarLogo()
 
         // Subviews
         prepareActivityIndicator()
@@ -48,11 +49,21 @@ class HomeViewController: UIViewController {
     // MARK: - Animate Curtain
     private func fadeOutLogo() {
 
-        UIView.animate(withDuration: 0.5, delay: 1.5, options: [], animations: { [weak self] in
+//        UIView.animate(withDuration: 0.5, delay: 1.5, options: [], animations: { [weak self] in
+//        })
+        UIView.animateKeyframes(withDuration: 0.5, delay: 1.5, options: [], animations: { [weak self] in
+
             guard let self = self else { return }
             self.curtainView?.alpha = 0
             self.view.layoutIfNeeded()
-        })
+
+        }) { (_) in
+
+            let designSelectionViewController = SelectionViewController()
+            designSelectionViewController.viewModel = self.viewModel
+            designSelectionViewController.modalPresentationStyle = .overFullScreen
+            self.present(designSelectionViewController, animated: true)
+        }
     }
 }
 

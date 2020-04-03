@@ -21,6 +21,7 @@ class ViewModel {
 
     // MARK: - Variables
     var albums = [Album]()
+    var showAlternativeDesign: Bool = false
     weak var delegate: ViewModelDelegate?
 //    weak var imageDelegate: ImageDelegate?
 
