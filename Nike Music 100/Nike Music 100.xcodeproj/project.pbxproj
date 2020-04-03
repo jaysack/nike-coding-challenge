@@ -28,6 +28,7 @@
 		E617ADD42436833B009D91BF /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD32436833B009D91BF /* AlbumTableViewCell.swift */; };
 		E617ADD6243693EF009D91BF /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD5243693EF009D91BF /* UIFont+Extension.swift */; };
 		E617ADD92436981D009D91BF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD82436981D009D91BF /* ViewModel.swift */; };
+		E617ADDB2436B7F5009D91BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADDA2436B7F5009D91BF /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E617ADD32436833B009D91BF /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		E617ADD5243693EF009D91BF /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		E617ADD82436981D009D91BF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E617ADDA2436B7F5009D91BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				E617ADBB24363457009D91BF /* NetworkManager.swift */,
+				E617ADDA2436B7F5009D91BF /* CacheManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				E617ADCE24364977009D91BF /* UIView+Extension.swift in Sources */,
 				E617ADC624363D60009D91BF /* FeedResponse.swift in Sources */,
 				E617ADC22436366C009D91BF /* AlbumType.swift in Sources */,
+				E617ADDB2436B7F5009D91BF /* CacheManager.swift in Sources */,
 				E617ADBC24363457009D91BF /* NetworkManager.swift in Sources */,
 				E617ADCC24364662009D91BF /* NLabel.swift in Sources */,
 				E617ADBA24362E57009D91BF /* Genre.swift in Sources */,
