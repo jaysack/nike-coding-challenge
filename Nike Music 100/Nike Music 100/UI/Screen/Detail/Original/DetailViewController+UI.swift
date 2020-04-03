@@ -17,37 +17,66 @@ extension DetailAlbumViewController {
     
 
     // MARK: - Config. Screen
+    func configScreen() {
+
+        view.backgroundColor = .NWhite
+
+        // Config.
+        mainStackView = UIStackView()
+        mainStackView?.axis = .vertical
+        mainStackView?.alignment = .fill
+        mainStackView?.distribution = .fill
+        mainStackView?.spacing = padding
+
+        // Add to superview
+        guard let mainStackView = mainStackView else { return }
+        view.addSubview(mainStackView)
+        mainStackView.setConstraint(topAnchor: view.topAnchor,
+                                    bottomAnchor: view.safeAreaLayoutGuide.bottomAnchor,
+                                    bottomConstant: buttonHeight + (padding * 2),
+                                    leadingAnchor: view.leadingAnchor,
+                                    trailingAnchor: view.trailingAnchor)
+    }
+
+
+    // MARK: - Image
     func prepareBackgroundImage() {
         // Config.
-        view.backgroundColor = .NWhite
         backgroundImageView = UIImageView()
-        backgroundImageView?.backgroundColor = .NWhite
         backgroundImageView?.contentMode = .scaleAspectFill
+        backgroundImageView?.setContentCompressionResistancePriority(.init(rawValue: 200), for: .vertical)
         
         // Add to view
-        backgroundImageView?.pinTo(superview: view)
-        
-        // Add tint
-        let tintView = UIView()
-        tintView.backgroundColor = .black
-        tintView.alpha = 0.4 
-        
-        tintView.pinTo(superview: view)
+        guard let backgroundImageView = backgroundImageView else { return }
+        mainStackView?.addArrangedSubview(backgroundImageView)
     }
     
     
+
+
     // MARK: - UI Elements
     func setupUI() {
         
         let album = viewModel?.albums[albumIndex]
 
+        // Padding View
+        let paddingView = UIView()
+        paddingView.backgroundColor = .red
+        paddingView.setContentHuggingPriority(.init(rawValue: 100), for: .vertical)
+        paddingView.setContentCompressionResistancePriority(.init(rawValue: 100), for: .vertical)
+        mainStackView?.addArrangedSubview(paddingView)
+
         // Labels
-        let artistNameLabel = NLabel(title: album?.artist, font: .NSubtitle, textColor: .NWhite)
-        let albumTitleLabel = NLabel(title: album?.name.uppercased(), font: .NTitleLarge, textColor: .NWhite)
-        let copyrightLabel = NLabel(title: album?.copyright, font: .systemFont(ofSize: 14), textColor: .NWhite)
+        let artistNameLabel = NLabel(title: album?.artist, font: .NSubtitle, textColor: .NBlack)
+        artistNameLabel.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
+        let albumTitleLabel = NLabel(title: album?.name.uppercased(), font: .NTitleLarge, textColor: .NBlack)
+        albumTitleLabel.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
+        let copyrightLabel = NLabel(title: album?.copyright, font: .systemFont(ofSize: 14), textColor: .NGray)
+        copyrightLabel.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
         
         // Label Stack View
         let labelStackView = UIStackView(arrangedSubviews: [artistNameLabel, albumTitleLabel])
+        labelStackView.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
 
         // Release Date string formatting
         let releaseDate = dateFormatter.date(from: album?.releaseDate ?? "")
@@ -57,7 +86,7 @@ extension DetailAlbumViewController {
         if let date = releaseDate {
             releaseDateLabel = NLabel(title: "Release Date: " + dateFormatter.string(from: date),
                                       font: .systemFont(ofSize: 14),
-                                      textColor: .NWhite)
+                                      textColor: .NGray)
         }
 
         labelStackView.addArrangedSubview(releaseDateLabel)
@@ -67,26 +96,40 @@ extension DetailAlbumViewController {
         labelStackView.alignment = .fill
         labelStackView.distribution = .fill
         labelStackView.spacing = padding / 2
+
+        // Add margins by using levelUpStackView
+        let leftPaddingView = UIView()
+        leftPaddingView.setSize(width: padding)
+
+        let rightPaddingView = UIView()
+        rightPaddingView.setSize(width: padding)
+
+        let labelMainStackView = UIStackView(arrangedSubviews: [leftPaddingView, labelStackView, rightPaddingView])
+        labelMainStackView.axis = .horizontal
+        labelMainStackView.alignment = .fill
+        labelMainStackView.distribution = .fill
+        labelMainStackView.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
         
         // Button
-        let buttonHeight: CGFloat = 50
         button = UIButton()
         button?.setTitle("Open in iTunes", for: .normal)
-        button?.setTitleColor(.NBlack, for: .normal)
-        button?.backgroundColor = .NWhite
+        button?.setTitleColor(.NWhite, for: .normal)
+        button?.backgroundColor = .NBlack
         button?.layer.cornerRadius = buttonHeight / 2
         button?.setSize(width: view.bounds.width - (padding * 2), height: buttonHeight)
         
         // Add constraints
         guard let button = button else { return }
         view.addSubview(button)
-        view.addSubview(labelStackView)
+//        view.addSubview(labelStackView)
         button.setConstraint(bottomAnchor: view.safeAreaLayoutGuide.bottomAnchor,
                              bottomConstant: padding,
                              centerXAnchor: view.centerXAnchor)
-        labelStackView.setConstraint(bottomAnchor: button.topAnchor,
-                                     bottomConstant: padding,
-                                     leadingAnchor: button.leadingAnchor,
-                                     trailingAnchor: button.trailingAnchor)
+        
+        mainStackView?.addArrangedSubview(labelMainStackView)
+//        labelStackView.setConstraint(bottomAnchor: button.topAnchor,
+//                                     bottomConstant: padding,
+//                                     leadingAnchor: button.leadingAnchor,
+//                                     trailingAnchor: button.trailingAnchor)
     }
 }
