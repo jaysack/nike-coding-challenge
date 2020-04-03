@@ -32,6 +32,20 @@ extension HomeViewController {
     }
 
 
+    // MARK: - Activity Indicator
+    func prepareActivityIndicator() {
+        // Config.
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator?.tintColor = .black
+        activityIndicator?.hidesWhenStopped = true
+
+        // Constraints
+        guard let activityIndicator = activityIndicator else { return }
+        view.addSubview(activityIndicator)
+        activityIndicator.centerIn(superview: view)
+    }
+
+
     // MARK: - Curtain View
     func prepareCurtainView() {
         // Config.

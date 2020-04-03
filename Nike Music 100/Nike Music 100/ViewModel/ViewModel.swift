@@ -10,6 +10,7 @@ import UIKit
 
 protocol ViewModelDelegate: AnyObject {
     func refreshAlbums()
+    func stopActivityIndicator()
 }
 
 class ViewModel {
@@ -33,6 +34,7 @@ class ViewModel {
             case .success(let response):
                 self?.albums = response.feed.results
                 self?.delegate?.refreshAlbums()
+                self?.delegate?.stopActivityIndicator()
 
             case .failure(let error):
                 print("Unable to fetch albums ~> \(error.localizedDescription)")

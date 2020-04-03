@@ -14,6 +14,10 @@ extension HomeViewController: ViewModelDelegate {
         albumsTableView?.separatorStyle = .singleLine
         albumsTableView?.reloadData()
     }
+
+    func stopActivityIndicator() {
+        activityIndicator?.stopAnimating()
+    }
 }
 
 
@@ -39,6 +43,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let width = collectionView.bounds.width / CGFloat(AlbumGenre.allCases.count)
         let height = collectionView.bounds.height
         return CGSize(width: width, height: height)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? GenreCollectionViewCell,
+            let genre = cell.genre else { return }
+        
+        activityIndicator?.startAnimating()
+        viewModel.loadAlbums(genre: genre, albumCount: 100)
     }
 }
 

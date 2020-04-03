@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     var mainStackView: UIStackView?
     var curtainView: UIView?
     var albumsTableView: UITableView?
+    var activityIndicator: UIActivityIndicatorView?
 
 
     // MARK: - Lifecycle Methods
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController {
         configScreen()
 
         // Subviews
+        prepareActivityIndicator()
         prepareCurtainView()
         setupGenresCollectionView()
         setupAlbumTableViewCell()
