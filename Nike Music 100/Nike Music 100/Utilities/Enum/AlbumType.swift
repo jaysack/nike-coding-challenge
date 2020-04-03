@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AlbumGenre: String {
+enum AlbumGenre: String, CaseIterable {
     case all
     case country
 }
