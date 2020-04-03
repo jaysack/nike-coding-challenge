@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
 
     // MARK: - Views
     var mainStackView: UIStackView?
-    var curtainView: UIView?
+    var curtainView: UIImageView?
     var albumsTableView: UITableView?
     var activityIndicator: UIActivityIndicatorView?
 
@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
 
         // ViewModel
         viewModel.delegate = self
@@ -42,17 +41,16 @@ class HomeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        animateCurtain()
+        fadeOutLogo()
     }
 
 
     // MARK: - Animate Curtain
-    private func animateCurtain() {
+    private func fadeOutLogo() {
 
-        UIView.animate(withDuration: 0.65, delay: 1, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseOut, animations: { [weak self] in
-
+        UIView.animate(withDuration: 0.5, delay: 1.5, options: [], animations: { [weak self] in
             guard let self = self else { return }
-            self.curtainView?.setConstraint(topAnchor: self.view.bottomAnchor)
+            self.curtainView?.alpha = 0
             self.view.layoutIfNeeded()
         })
     }

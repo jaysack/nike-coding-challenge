@@ -11,6 +11,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var navController: UINavigationController = {
+        let navigationController = UINavigationController(rootViewController: HomeViewController())
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.tintColor = .NWhite
+        return navigationController
+    }()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -21,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
 
@@ -52,7 +59,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
 
 }
 

@@ -49,21 +49,19 @@ extension HomeViewController {
     // MARK: - Curtain View
     func prepareCurtainView() {
         // Config.
-        curtainView = UIView()
+        curtainView = UIImageView(image: UIImage(named: "nike-image"))
+        curtainView?.contentMode = .scaleAspectFit
         curtainView?.backgroundColor = .NFakeWhite
         curtainView?.layer.zPosition = 1
     
         // Required constraints
         guard let curtainView = curtainView else { return }
         view.addSubview(curtainView)
-        curtainView.setConstraint(bottomAnchor: view.bottomAnchor,
+        curtainView.setConstraint(topAnchor: view.topAnchor,
+                                  topConstant: UIApplication.shared.statusBarFrame.size.height ?? 0,
+                                  bottomAnchor: view.bottomAnchor,
                                   leadingAnchor: view.leadingAnchor,
                                   trailingAnchor: view.trailingAnchor)
-
-        // Optional constraints
-        let optionalConstraint = curtainView.topAnchor.constraint(equalTo: view.topAnchor)
-        optionalConstraint.priority = .defaultLow
-        NSLayoutConstraint.activate([optionalConstraint])
     }
 
 

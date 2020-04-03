@@ -10,5 +10,7 @@ import UIKit
 
 extension UIFont {
     static var NTitle: UIFont? { return UIFont(name: "Futura-CondensedMedium", size: 16) }
+    static var NTitleLarge: UIFont? { return UIFont(name: "Futura-CondensedExtraBold", size: 42) }
     static var NTitleBold: UIFont? { return UIFont(name: "Futura-CondensedExtraBold", size: 16) }
+    static var NSubtitle: UIFont? { return UIFont.systemFont(ofSize: 18, weight: .semibold) }
 }
