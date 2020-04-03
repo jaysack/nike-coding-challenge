@@ -49,6 +49,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let cell = collectionView.cellForItem(at: indexPath) as? GenreCollectionViewCell,
             let genre = cell.genre else { return }
         
+        // Hide cells
+        guard let cells = albumsTableView?.visibleCells else { return }
+        for cell in cells {
+            cell.alpha = 0
+        }
+        
+        view.layoutIfNeeded()
+
         activityIndicator?.startAnimating()
         viewModel.loadAlbums(genre: genre, albumCount: 100)
     }
@@ -85,14 +93,35 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        guard cell.alpha == 0 else { return }
+        UIView.animate(withDuration: 0.25, delay: 0.25 * Double(indexPath.row), animations: {
+            cell.alpha = 1
+        })
+    }
+
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        // Config. Detail VC
+        if viewModel.showAlternativeDesign ?? false {
+
+            // Config. VC
+            let detailAlternativeViewController = DetailAlternativeAlbumViewController()
+            detailAlternativeViewController.viewModel = viewModel
+            detailAlternativeViewController.albumIndex = indexPath.row
+
+            // Push View Controller
+            navigationController?.pushViewController(detailAlternativeViewController, animated: true)
+            return
+        }
+
+        // Config.
         let detailViewController = DetailAlbumViewController()
         detailViewController.viewModel = viewModel
         detailViewController.albumIndex = indexPath.row
 
-        // Push View Controller
+        // Push
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

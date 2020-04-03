@@ -58,12 +58,20 @@ class HomeViewController: UIViewController {
             self.view.layoutIfNeeded()
 
         }) { (_) in
-
-            let designSelectionViewController = SelectionViewController()
-            designSelectionViewController.viewModel = self.viewModel
-            designSelectionViewController.modalPresentationStyle = .overFullScreen
-            self.present(designSelectionViewController, animated: true)
+            self.presentDesignSelectionScreen()
         }
+    }
+
+
+    // MARK: - Present Design Selection Screen
+    private func presentDesignSelectionScreen() {
+
+        guard viewModel.showAlternativeDesign == nil else { return }
+
+        let designSelectionViewController = SelectionViewController()
+        designSelectionViewController.viewModel = self.viewModel
+        designSelectionViewController.modalPresentationStyle = .overFullScreen
+        present(designSelectionViewController, animated: true)
     }
 }
 

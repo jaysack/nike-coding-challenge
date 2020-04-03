@@ -12,6 +12,7 @@ class DetailAlbumViewController: UIViewController {
     
     // MARK: - Constants
     let padding: CGFloat = 20
+    let buttonHeight: CGFloat = 50
     
     
     // MARK: - Property
@@ -25,6 +26,7 @@ class DetailAlbumViewController: UIViewController {
     
     
     // MARK: - Views
+    var mainStackView: UIStackView?
     var backgroundImageView: UIImageView?
     var button: UIButton?
     
@@ -35,6 +37,7 @@ class DetailAlbumViewController: UIViewController {
         
         // UI
         setStatusBar()
+        configScreen()
         prepareBackgroundImage()
         setupUI()
         loadBackgroundImage()
