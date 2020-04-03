@@ -57,7 +57,13 @@ final class NetworkManager {
         }
         
         URLSession.shared.dataTask(with: url ) { (dat, _, _) in
+
             if let data = dat {
+
+                // Cache Image
+                CacheManager.shared.save(data: data, forKey: imageUrl)
+
+                // Return on Main Thread
                 DispatchQueue.main.async {
                     completion(UIImage(data: data))
                 }

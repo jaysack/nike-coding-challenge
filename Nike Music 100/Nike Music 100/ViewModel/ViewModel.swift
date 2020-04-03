@@ -21,6 +21,7 @@ class ViewModel {
     
     // MARK: - Services
     let network = NetworkManager.shared
+    let cache = CacheManager.shared
 
 
     // MARK: - Fetch Albums
@@ -42,8 +43,21 @@ class ViewModel {
 
     // MARK: - Load Image
     func loadImage(albumIndex: Int, completion: @escaping (UIImage?) -> Void) {
-        network.fetchAlbumCover(imageUrl: albums[albumIndex].image) { (image) in
-            completion(image)
+
+        // Try from cache first
+        cache.retrieve(imageUrl: albums[albumIndex].image) { [weak self] (image) in
+            if let image = image {
+                completion(image)
+                return
+            }
+
+            // Fetch from network
+            guard let self = self else { return }
+            self.network.fetchAlbumCover(imageUrl: self.albums[albumIndex].image) { (image) in
+                completion(image)
+            }
         }
+
+        
     }
 }
