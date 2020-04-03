@@ -28,21 +28,33 @@ Althought one of the requierements for this challenge was presenting all possibl
 
 
 ## 3. UI/UX
-**Current Nike App:**
-<img src="Demo/nike-app-1.gif" width="200" height="400">   <img src="Demo/nike-app-2.gif" width="200" height="400">   <img src="Demo/nike-app-3.gif" width="200" height="400">  <img src="Demo/nike-app-4.gif" width="200" height="400">
+**Current Nike App:** 
+<br>
+<img src="Demo/nike-app-1.png" width="210">   <img src="Demo/nike-app-2.png" width="210">   <img src="Demo/nike-app-3.png" width="210">  <img src="Demo/nike-app-4.png" width="210">
+<br>
+<br>
 
 **Nike Music 100 (Sample App)**
-<img src="Demo/nike-sample-1.gif" width="210" height="420">   <img src="Demo/nike-sample-2.gif" width="200" height="400">   <img src="Demo/nike-sample-3.gif" width="200" height="400">  <img src="Demo/nike-sample-4.gif" width="200" height="400">
+<br>
+<img src="Demo/nike-sample-1.gif" width="210">   <img src="Demo/nike-sample-2.gif" width="210">   <img src="Demo/nike-sample-3.gif" width="210">  <img src="Demo/nike-sample-4.gif" width="210">
+<br>
+<br>
 
 
 ## 4. Alternative App
 While developing the app, some Nike core UI/UX were not implementable with the original set of requirements. Therefore, a need for creating an *alternative* design to go along the coding challenge quickly arise.
 
 At launch, users can switch to the alternative design as needed
-<img src="Demo/nike-alternative-1.gif" width="200" height="400">
+<br>
+<img src="Demo/nike-alternative-1.gif" width="210">
+<br>
+<br>
 
 **Nike Music 100 (Alternative)**
-<img src="Demo/nike-alternative-1.gif" width="200" height="400">   <img src="Demo/nike-alternative-2.gif" width="200" height="400">   <img src="Demo/nike-alternative-3.gif" width="200" height="400">  <img src="Demo/nike-alternative-4.gif" width="200" height="400">
+<br>
+<img src="Demo/nike-alternative-1.gif" width="210">   <img src="Demo/nike-alternative-2.gif" width="210">   <img src="Demo/nike-alternative-3.gif" width="210">  <img src="Demo/nike-alternative-4.gif" width="210">
+<br>
+<br>
 
 
 ## 4. Discussion
@@ -57,4 +69,4 @@ The following items will developed/implemented next:
 
 ## 5. Any Thoughts?
 If you like this sample app, feel free to check out my other GitHub repositories.
-You can also contact me at *jonathan.sack91@gmail.com* if you have any questions
+You can also contact me on [LinkedIn](https://www.linkedin.com/in/jonathan-sack/) if you have any questions
