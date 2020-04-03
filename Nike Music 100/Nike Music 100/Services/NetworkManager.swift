@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jonathan Sack. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class NetworkManager {
     
@@ -44,5 +44,24 @@ final class NetworkManager {
                 return
             }
         }).resume()
+    }
+
+    
+    // MARK: - Fetch Album Cover
+    func fetchAlbumCover(imageUrl: String, completion: @escaping (UIImage?) -> Void) {
+        
+        guard let url = URL(string: imageUrl) else {
+            print("⚠️ - Image url not valid")
+            completion(nil)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url ) { (dat, _, _) in
+            if let data = dat {
+                DispatchQueue.main.async {
+                    completion(UIImage(data: data))
+                }
+            }
+        }.resume()
     }
 }

@@ -19,6 +19,15 @@
 		E617ADC22436366C009D91BF /* AlbumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC12436366C009D91BF /* AlbumType.swift */; };
 		E617ADC424363D0F009D91BF /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC324363D0F009D91BF /* Feed.swift */; };
 		E617ADC624363D60009D91BF /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC524363D60009D91BF /* FeedResponse.swift */; };
+		E617ADC8243642FB009D91BF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC7243642FA009D91BF /* UIColor+Extension.swift */; };
+		E617ADCA24364552009D91BF /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADC924364552009D91BF /* CategoryCollectionViewCell.swift */; };
+		E617ADCC24364662009D91BF /* NLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADCB24364662009D91BF /* NLabel.swift */; };
+		E617ADCE24364977009D91BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADCD24364977009D91BF /* UIView+Extension.swift */; };
+		E617ADD0243653E9009D91BF /* HomeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADCF243653E9009D91BF /* HomeViewController+UI.swift */; };
+		E617ADD224365553009D91BF /* HomeViewController+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD124365553009D91BF /* HomeViewController+Protocols.swift */; };
+		E617ADD42436833B009D91BF /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD32436833B009D91BF /* AlbumTableViewCell.swift */; };
+		E617ADD6243693EF009D91BF /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD5243693EF009D91BF /* UIFont+Extension.swift */; };
+		E617ADD92436981D009D91BF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADD82436981D009D91BF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +45,15 @@
 		E617ADC12436366C009D91BF /* AlbumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumType.swift; sourceTree = "<group>"; };
 		E617ADC324363D0F009D91BF /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		E617ADC524363D60009D91BF /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		E617ADC7243642FA009D91BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E617ADC924364552009D91BF /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		E617ADCB24364662009D91BF /* NLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLabel.swift; sourceTree = "<group>"; };
+		E617ADCD24364977009D91BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E617ADCF243653E9009D91BF /* HomeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UI.swift"; sourceTree = "<group>"; };
+		E617ADD124365553009D91BF /* HomeViewController+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Protocols.swift"; sourceTree = "<group>"; };
+		E617ADD32436833B009D91BF /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		E617ADD5243693EF009D91BF /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		E617ADD82436981D009D91BF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				E617ADB02436242A009D91BF /* Model */,
+				E617ADD724369801009D91BF /* ViewModel */,
 				E617ADAF24362425009D91BF /* UI */,
 				E617ADAE24362420009D91BF /* Services */,
 				E617ADAD2436241B009D91BF /* Utilities */,
@@ -148,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				E617AD9C243623FC009D91BF /* HomeViewController.swift */,
+				E617ADCF243653E9009D91BF /* HomeViewController+UI.swift */,
+				E617ADD124365553009D91BF /* HomeViewController+Protocols.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -162,6 +183,8 @@
 		E617ADB524362668009D91BF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E617ADC924364552009D91BF /* CategoryCollectionViewCell.swift */,
+				E617ADD32436833B009D91BF /* AlbumTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +192,7 @@
 		E617ADB62436266E009D91BF /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				E617ADCB24364662009D91BF /* NLabel.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -176,6 +200,9 @@
 		E617ADBD243635AB009D91BF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E617ADD5243693EF009D91BF /* UIFont+Extension.swift */,
+				E617ADCD24364977009D91BF /* UIView+Extension.swift */,
+				E617ADC7243642FA009D91BF /* UIColor+Extension.swift */,
 				E617ADBE243635DC009D91BF /* URLRequest+Extension.swift */,
 			);
 			path = Extension;
@@ -187,6 +214,14 @@
 				E617ADC12436366C009D91BF /* AlbumType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		E617ADD724369801009D91BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E617ADD82436981D009D91BF /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,12 +297,21 @@
 				E617AD9D243623FC009D91BF /* HomeViewController.swift in Sources */,
 				E617ADC424363D0F009D91BF /* Feed.swift in Sources */,
 				E617ADBF243635DC009D91BF /* URLRequest+Extension.swift in Sources */,
+				E617ADD0243653E9009D91BF /* HomeViewController+UI.swift in Sources */,
+				E617ADD42436833B009D91BF /* AlbumTableViewCell.swift in Sources */,
+				E617ADC8243642FB009D91BF /* UIColor+Extension.swift in Sources */,
+				E617ADD6243693EF009D91BF /* UIFont+Extension.swift in Sources */,
+				E617ADCA24364552009D91BF /* CategoryCollectionViewCell.swift in Sources */,
 				E617AD99243623FC009D91BF /* AppDelegate.swift in Sources */,
 				E617AD9B243623FC009D91BF /* SceneDelegate.swift in Sources */,
 				E617ADB824362B93009D91BF /* Album.swift in Sources */,
+				E617ADD92436981D009D91BF /* ViewModel.swift in Sources */,
+				E617ADD224365553009D91BF /* HomeViewController+Protocols.swift in Sources */,
+				E617ADCE24364977009D91BF /* UIView+Extension.swift in Sources */,
 				E617ADC624363D60009D91BF /* FeedResponse.swift in Sources */,
 				E617ADC22436366C009D91BF /* AlbumType.swift in Sources */,
 				E617ADBC24363457009D91BF /* NetworkManager.swift in Sources */,
+				E617ADCC24364662009D91BF /* NLabel.swift in Sources */,
 				E617ADBA24362E57009D91BF /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
