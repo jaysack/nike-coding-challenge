@@ -32,6 +32,18 @@ extension HomeViewController {
     }
 
 
+    // MARK: - Navbar Logo
+    func addNavbarLogo() {
+        // Get Logo
+        let logo = UIImage(named: "nike-logo")
+        let logoView = UIImageView(image: logo)
+        logoView.contentMode = .scaleAspectFit
+        logoView.setSize(width: 100, height: 50)
+
+        navigationController?.navigationItem.titleView = logoView
+    }
+
+
     // MARK: - Activity Indicator
     func prepareActivityIndicator() {
         // Config.
