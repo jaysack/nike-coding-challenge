@@ -13,11 +13,16 @@ protocol ViewModelDelegate: AnyObject {
     func stopActivityIndicator()
 }
 
+//protocol ImageDelegate: AnyObject {
+//    func displayLargeImage()
+//}
+
 class ViewModel {
 
     // MARK: - Variables
     var albums = [Album]()
     weak var delegate: ViewModelDelegate?
+//    weak var imageDelegate: ImageDelegate?
 
     
     // MARK: - Services
@@ -44,10 +49,13 @@ class ViewModel {
 
 
     // MARK: - Load Image
-    func loadImage(albumIndex: Int, completion: @escaping (UIImage?) -> Void) {
+    func loadImage(albumIndex: Int, largeFormat: Bool = false, completion: @escaping (UIImage?) -> Void) {
+
+        let imageUrl = albums[albumIndex].image
+        guard let url = largeFormat ? getLargeImageUrlString(from: imageUrl) : imageUrl else { return }
 
         // Try from cache first
-        cache.retrieve(imageUrl: albums[albumIndex].image) { [weak self] (image) in
+        cache.retrieve(imageUrl: url) { [weak self] (image) in
             if let image = image {
                 completion(image)
                 return
@@ -55,11 +63,24 @@ class ViewModel {
 
             // Fetch from network
             guard let self = self else { return }
-            self.network.fetchAlbumCover(imageUrl: self.albums[albumIndex].image) { (image) in
+            self.network.fetchAlbumCover(imageUrl: url) { (image) in
                 completion(image)
             }
         }
+    }
 
-        
+    
+    // MARK: - Get Large Image URL
+    private func getLargeImageUrlString(from imageUrl: String) -> String? {
+
+        let largeImageFormat = "804x0w.jpg"
+
+        if let range = imageUrl.range(of: ".jpg/") {
+
+            let largeImageUrlString = imageUrl[...range.lowerBound]
+            return largeImageUrlString + "jpg/" + largeImageFormat
+        }
+
+        return nil
     }
 }

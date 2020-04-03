@@ -14,7 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        if let font = UIFont.NTitleBold {
+            UIBarButtonItem.appearance().setTitleTextAttributes([
+                NSAttributedString.Key.font: font
+            ], for: UIControl.State.normal)
+        }
         return true
     }
 

@@ -11,7 +11,7 @@ import UIKit
 class NLabel: UILabel {
     
     // MARK: - Init Method
-    convenience init(title: String, font: UIFont?, textColor: UIColor?, allowMultiline: Bool = true) {
+    convenience init(title: String?, font: UIFont?, textColor: UIColor?, allowMultiline: Bool = true) {
         self.init()
         
         // Config.

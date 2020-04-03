@@ -83,4 +83,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        // Config. Detail VC
+        let detailViewController = DetailAlbumViewController()
+        detailViewController.viewModel = viewModel
+        detailViewController.albumIndex = indexPath.row
+
+        // Push View Controller
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
 }
