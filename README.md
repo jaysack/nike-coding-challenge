@@ -64,7 +64,7 @@ The following items will developed/implemented next:
 - Integrating `CoreData` to limit network usage and save already fetched albums
 - using a `UIPageViewController` to swipe between albums in `DetailAlternativeViewController`
 - adding a `UIGestureRecognizer` allowing users to dismiss the screen by simply swiping down (in Detail View Controller)
-- adding a *Throttler* in `HomeViewController` to limit network requests in case users scroll fast
+- adding a *Throttler* in `HomeViewController` to limit unnecessary network requests in case users scroll fast
 
 
 ## 5. Any Thoughts?
