@@ -85,7 +85,7 @@ class SelectionViewController: UIViewController {
         } else {
             button.setTitleColor(.NBlack, for: .normal)
             button.layer.borderColor = UIColor.NSilver?.cgColor
-            button.layer.borderWidth = 0.5
+            button.layer.borderWidth = 1
         }
 
         return button

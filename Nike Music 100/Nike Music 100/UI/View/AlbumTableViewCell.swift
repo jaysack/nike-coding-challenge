@@ -90,7 +90,8 @@ class AlbumTableViewCell: UITableViewCell {
         rankingLabel = NLabel(title: String(1), font: .monospacedSystemFont(ofSize: 14, weight: .bold), textColor: .NBlack)
         
         guard let rankingLabel = rankingLabel else { return }
-        rankingLabel.setContentHuggingPriority(.init(rawValue: 1000), for: .horizontal)
+        rankingLabel.setSize(width: 26)
+        
 
         // Add to Stack View
         cellStackView?.addArrangedSubview(rankingLabel)

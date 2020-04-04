@@ -35,6 +35,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         // Config. cell
         cell.genre = AlbumGenre.allCases[indexPath.row]
+        if indexPath.row < AlbumGenre.allCases.count - 1 {
+            cell.addSeparatorLine()
+        }
+
         return cell
     }
 

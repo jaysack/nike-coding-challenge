@@ -46,7 +46,13 @@ class DetailAlbumViewController: UIViewController {
         enableButton()
     }
     
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
     
+
     // MARK: - Load Image
     func loadBackgroundImage() {
         viewModel?.loadImage(albumIndex: albumIndex, largeFormat: true, completion: { [weak self] (image) in

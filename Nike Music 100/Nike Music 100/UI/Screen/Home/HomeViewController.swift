@@ -37,7 +37,13 @@ class HomeViewController: UIViewController {
         prepareActivityIndicator()
         prepareCurtainView()
         setupGenresCollectionView()
+        addDivider()
         setupAlbumTableViewCell()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -49,8 +55,6 @@ class HomeViewController: UIViewController {
     // MARK: - Animate Curtain
     private func fadeOutLogo() {
 
-//        UIView.animate(withDuration: 0.5, delay: 1.5, options: [], animations: { [weak self] in
-//        })
         UIView.animateKeyframes(withDuration: 0.5, delay: 1.5, options: [], animations: { [weak self] in
 
             guard let self = self else { return }
