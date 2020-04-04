@@ -18,10 +18,12 @@ extension DetailAlternativeAlbumViewController {
 
     // MARK: - Config. Screen
     func prepareBackgroundImage() {
+
         // Config.
         view.backgroundColor = .NWhite
+
         backgroundImageView = UIImageView()
-        backgroundImageView?.backgroundColor = .NWhite
+        backgroundImageView?.clipsToBounds = true
         backgroundImageView?.contentMode = .scaleAspectFill
         
         // Add to view
@@ -41,13 +43,31 @@ extension DetailAlternativeAlbumViewController {
         
         let album = viewModel?.albums[albumIndex]
 
-        // Labels
+        // Ranking Label
+        let rankingLabel = NLabel(title: String(albumIndex + 1), font: .NSubtitle, textColor: .NBlack)
+        rankingLabel.setSize(width: 34, height: 34)
+        rankingLabel.backgroundColor = .NWhite
+        rankingLabel.textAlignment = .center
+        rankingLabel.clipsToBounds = true
+        rankingLabel.layer.cornerRadius = 17
+
+        let rankingEmptySpace = UIView()
+        rankingEmptySpace.setContentHuggingPriority(.init(100), for: .horizontal)
+
+        let rankingStackView = UIStackView(arrangedSubviews: [rankingLabel, rankingEmptySpace])
+        rankingStackView.setDefaultConfig(axis: .horizontal)
+
+        // Artist Label
         let artistNameLabel = NLabel(title: album?.artist, font: .NSubtitle, textColor: .NWhite)
+
+        // Album Label
         let albumTitleLabel = NLabel(title: album?.name.uppercased(), font: .NTitleLarge, textColor: .NWhite)
+
+        // Copyrights
         let copyrightLabel = NLabel(title: album?.copyright, font: .systemFont(ofSize: 14), textColor: .NWhite)
         
         // Label Stack View
-        let labelStackView = UIStackView(arrangedSubviews: [artistNameLabel, albumTitleLabel])
+        let labelStackView = UIStackView(arrangedSubviews: [rankingStackView, artistNameLabel, albumTitleLabel])
 
         // Release Date string formatting
         let releaseDate = dateFormatter.date(from: album?.releaseDate ?? "")

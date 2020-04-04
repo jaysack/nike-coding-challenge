@@ -25,7 +25,8 @@ extension HomeViewController {
         // Add constraints
         guard let mainStackView = mainStackView else { return }
         view.addSubview(mainStackView)
-        mainStackView.setConstraint(topAnchor: view.safeAreaLayoutGuide.topAnchor,
+        mainStackView.setConstraint(topAnchor: view.topAnchor,
+                                    topConstant: UIApplication.shared.statusBarFrame.size.height ?? 0,
                                     bottomAnchor: view.bottomAnchor,
                                     leadingAnchor: view.leadingAnchor,
                                     trailingAnchor: view.trailingAnchor)
@@ -64,7 +65,7 @@ extension HomeViewController {
         curtainView = UIImageView(image: UIImage(named: "nike-image"))
         curtainView?.contentMode = .scaleAspectFit
         curtainView?.backgroundColor = .NFakeWhite
-        curtainView?.layer.zPosition = 1
+        curtainView?.layer.zPosition = 2
     
         // Required constraints
         guard let curtainView = curtainView else { return }
@@ -107,6 +108,23 @@ extension HomeViewController {
         mainStackView?.addArrangedSubview(genresCollectionView)
     }
 
+    // MARK: - Divider
+    func addDivider() {
+
+        // Middle View
+        let middleView = UIView()
+        middleView.setSize(height: 10)
+        middleView.backgroundColor = UIColor.NSilver?.withAlphaComponent(0.25)
+
+        // Stack View
+        let dividerStackView = UIStackView(arrangedSubviews: [getBorderLine(), middleView, getBorderLine()])
+        dividerStackView.setDefaultConfig()
+
+        // Add to content stack view
+        mainStackView?.addArrangedSubview(dividerStackView)
+    }
+
+
     // MARK: - Album TableView
     func setupAlbumTableViewCell() {
 
@@ -124,5 +142,15 @@ extension HomeViewController {
         // Add to content Stack View
         guard let albumsTableView = albumsTableView else { return }
         mainStackView?.addArrangedSubview(albumsTableView)
+    }
+
+
+    // MARK: - Border
+    private func getBorderLine() -> UIView {
+
+        let borderView = UIView()
+        borderView.setSize(height: 1)
+        borderView.backgroundColor = .NSilver
+        return borderView
     }
 }

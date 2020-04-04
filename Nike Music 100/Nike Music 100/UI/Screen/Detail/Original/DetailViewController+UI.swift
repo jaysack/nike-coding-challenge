@@ -43,6 +43,7 @@ extension DetailAlbumViewController {
     func prepareBackgroundImage() {
         // Config.
         backgroundImageView = UIImageView()
+        backgroundImageView?.clipsToBounds = true
         backgroundImageView?.contentMode = .scaleAspectFill
         backgroundImageView?.setContentCompressionResistancePriority(.init(rawValue: 200), for: .vertical)
         

@@ -46,13 +46,14 @@ While developing the app, some Nike core UI/UX were not implementable with the o
 
 At launch, users can switch to the alternative design as needed
 <br>
+<img src="Demo/nike-alternative-0.gif" width="210">
 <img src="Demo/nike-alternative-1.gif" width="210">
 <br>
 <br>
 
 **Nike Music 100 (Alternative)**
 <br>
-<img src="Demo/nike-alternative-1.gif" width="210">   <img src="Demo/nike-alternative-2.gif" width="210">   <img src="Demo/nike-alternative-3.gif" width="210">  <img src="Demo/nike-alternative-4.gif" width="210">
+<img src="Demo/nike-alternative-2.gif" width="210">   <img src="Demo/nike-alternative-3.gif" width="210">  <img src="Demo/nike-alternative-4.gif" width="210">  <img src="Demo/nike-alternative-5.gif" width="210">
 <br>
 <br>
 

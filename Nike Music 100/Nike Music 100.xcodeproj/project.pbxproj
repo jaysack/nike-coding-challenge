@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60414CD2438F3A6008FEF24 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60414CC2438F3A5008FEF24 /* UIStackView+Extension.swift */; };
 		E617AD99243623FC009D91BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617AD98243623FC009D91BF /* AppDelegate.swift */; };
 		E617AD9B243623FC009D91BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617AD9A243623FC009D91BF /* SceneDelegate.swift */; };
 		E617AD9D243623FC009D91BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617AD9C243623FC009D91BF /* HomeViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60414CC2438F3A5008FEF24 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E617AD95243623FC009D91BF /* Nike Music 100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike Music 100.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E617AD98243623FC009D91BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E617AD9A243623FC009D91BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				E617ADEA24379BAD009D91BF /* UILabel+Extension.swift */,
 				E617ADC7243642FA009D91BF /* UIColor+Extension.swift */,
 				E617ADBE243635DC009D91BF /* URLRequest+Extension.swift */,
+				E60414CC2438F3A5008FEF24 /* UIStackView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				E617ADC424363D0F009D91BF /* Feed.swift in Sources */,
 				E617ADE924378EC8009D91BF /* SelectionViewController.swift in Sources */,
 				E617ADBF243635DC009D91BF /* URLRequest+Extension.swift in Sources */,
+				E60414CD2438F3A6008FEF24 /* UIStackView+Extension.swift in Sources */,
 				E617ADD0243653E9009D91BF /* HomeViewController+UI.swift in Sources */,
 				E617ADD42436833B009D91BF /* AlbumTableViewCell.swift in Sources */,
 				E617ADC8243642FB009D91BF /* UIColor+Extension.swift in Sources */,
