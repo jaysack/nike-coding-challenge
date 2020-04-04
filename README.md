@@ -60,7 +60,7 @@ At launch, users can switch to the alternative design as needed
 ## 4. Discussion
 With more development time, the items below would be implemented next (there's just so much lines one can code in just 24 hours).
 
-The following items will developed/implemented next:
+The following items would be developed/implemented next:
 - Integrating `CoreData` to limit network usage and save already fetched albums
 - using a `UIPageViewController` to swipe between albums in `DetailAlternativeViewController`
 - adding a `UIGestureRecognizer` allowing users to dismiss the screen by simply swiping down (in Detail View Controller)
