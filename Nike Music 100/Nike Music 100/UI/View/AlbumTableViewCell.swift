@@ -51,7 +51,6 @@ class AlbumTableViewCell: UITableViewCell {
     }
     
 
-
     // MARK: - Prepare UI
     private func prepareUI() {
         setupStackView()
@@ -66,10 +65,7 @@ class AlbumTableViewCell: UITableViewCell {
     private func setupStackView() {
         // Config.
         cellStackView = UIStackView()
-        cellStackView?.axis = .horizontal
-        cellStackView?.alignment = .fill
-        cellStackView?.distribution = .fill
-        cellStackView?.spacing = padding
+        cellStackView?.setDefaultConfig(spacing: padding, axis: .horizontal)
 
         // Constraints
         guard let cellStackView = cellStackView else { return }
@@ -92,7 +88,6 @@ class AlbumTableViewCell: UITableViewCell {
         guard let rankingLabel = rankingLabel else { return }
         rankingLabel.setSize(width: 26)
         
-
         // Add to Stack View
         cellStackView?.addArrangedSubview(rankingLabel)
     }
@@ -139,9 +134,7 @@ class AlbumTableViewCell: UITableViewCell {
         // Config. Stack View
         guard let albumTitleLabel = albumTitleLabel, let artistNameLabel = artistNameLabel else { return }
         let labelStackView = UIStackView(arrangedSubviews: [topPadding, albumTitleLabel, artistNameLabel, bottomPadding])
-        labelStackView.axis = .vertical
-        labelStackView.alignment = .fill
-        labelStackView.distribution = .fill
+        labelStackView.setDefaultConfig()
         labelStackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         labelStackView.setContentHuggingPriority(.init(rawValue: 100), for: .horizontal)
 

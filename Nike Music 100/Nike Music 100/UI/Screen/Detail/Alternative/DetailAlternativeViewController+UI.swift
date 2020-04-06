@@ -68,6 +68,7 @@ extension DetailAlternativeAlbumViewController {
         
         // Label Stack View
         let labelStackView = UIStackView(arrangedSubviews: [rankingStackView, artistNameLabel, albumTitleLabel])
+        labelStackView.setDefaultConfig(spacing: padding / 2)
 
         // Release Date string formatting
         let releaseDate = dateFormatter.date(from: album?.releaseDate ?? "")
@@ -83,11 +84,6 @@ extension DetailAlternativeAlbumViewController {
         labelStackView.addArrangedSubview(releaseDateLabel)
         labelStackView.addArrangedSubview(copyrightLabel)
 
-        labelStackView.axis = .vertical
-        labelStackView.alignment = .fill
-        labelStackView.distribution = .fill
-        labelStackView.spacing = padding / 2
-        
         // Button
         let buttonHeight: CGFloat = 50
         button = UIButton()

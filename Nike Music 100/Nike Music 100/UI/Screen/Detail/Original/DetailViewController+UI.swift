@@ -23,10 +23,7 @@ extension DetailAlbumViewController {
 
         // Config.
         mainStackView = UIStackView()
-        mainStackView?.axis = .vertical
-        mainStackView?.alignment = .fill
-        mainStackView?.distribution = .fill
-        mainStackView?.spacing = padding
+        mainStackView?.setDefaultConfig(spacing: padding)
 
         // Add to superview
         guard let mainStackView = mainStackView else { return }
@@ -77,6 +74,7 @@ extension DetailAlbumViewController {
         
         // Label Stack View
         let labelStackView = UIStackView(arrangedSubviews: [artistNameLabel, albumTitleLabel])
+        labelStackView.setDefaultConfig(spacing: padding / 2)
         labelStackView.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
 
         // Release Date string formatting
@@ -93,11 +91,6 @@ extension DetailAlbumViewController {
         labelStackView.addArrangedSubview(releaseDateLabel)
         labelStackView.addArrangedSubview(copyrightLabel)
 
-        labelStackView.axis = .vertical
-        labelStackView.alignment = .fill
-        labelStackView.distribution = .fill
-        labelStackView.spacing = padding / 2
-
         // Add margins by using levelUpStackView
         let leftPaddingView = UIView()
         leftPaddingView.setSize(width: padding)
@@ -106,9 +99,7 @@ extension DetailAlbumViewController {
         rightPaddingView.setSize(width: padding)
 
         let labelMainStackView = UIStackView(arrangedSubviews: [leftPaddingView, labelStackView, rightPaddingView])
-        labelMainStackView.axis = .horizontal
-        labelMainStackView.alignment = .fill
-        labelMainStackView.distribution = .fill
+        labelMainStackView.setDefaultConfig(axis: .horizontal)
         labelMainStackView.setContentCompressionResistancePriority(.init(rawValue: 1000), for: .vertical)
         
         // Button
@@ -122,15 +113,10 @@ extension DetailAlbumViewController {
         // Add constraints
         guard let button = button else { return }
         view.addSubview(button)
-//        view.addSubview(labelStackView)
         button.setConstraint(bottomAnchor: view.safeAreaLayoutGuide.bottomAnchor,
                              bottomConstant: padding,
                              centerXAnchor: view.centerXAnchor)
         
         mainStackView?.addArrangedSubview(labelMainStackView)
-//        labelStackView.setConstraint(bottomAnchor: button.topAnchor,
-//                                     bottomConstant: padding,
-//                                     leadingAnchor: button.leadingAnchor,
-//                                     trailingAnchor: button.trailingAnchor)
     }
 }

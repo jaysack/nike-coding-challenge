@@ -44,10 +44,7 @@ class SelectionViewController: UIViewController {
         paddingView.setContentHuggingPriority(.init(100), for: .horizontal)
 
         let buttonStackView = UIStackView(arrangedSubviews: [acceptButton, cancelButton, paddingView])
-        buttonStackView.axis = .horizontal
-        buttonStackView.alignment = .fill
-        buttonStackView.distribution = .fill
-        buttonStackView.spacing = padding / 2
+        buttonStackView.setDefaultConfig(spacing: padding / 2, axis: .horizontal)
 
         // MARK: - Prompt View
         let promptView = UIView()
@@ -56,10 +53,7 @@ class SelectionViewController: UIViewController {
 
         // MARK: - Stack View
         let stackView = UIStackView(arrangedSubviews: [header, subheader, buttonStackView])
-        stackView.axis = .vertical
-        stackView.alignment = .fill
-        stackView.distribution = .fill
-        stackView.spacing = padding
+        stackView.setDefaultConfig(spacing: padding)
         stackView.pinTo(superview: promptView, xPadding: padding, yPadding: padding)
 
         // MARK: - Add to superview

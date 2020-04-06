@@ -18,9 +18,7 @@ extension HomeViewController {
 
         // Stack View
         mainStackView = UIStackView()
-        mainStackView?.axis = .vertical
-        mainStackView?.alignment = .fill
-        mainStackView?.distribution = .fill
+        mainStackView?.setDefaultConfig()
 
         // Add constraints
         guard let mainStackView = mainStackView else { return }
