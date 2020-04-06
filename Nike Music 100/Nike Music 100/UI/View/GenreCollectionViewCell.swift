@@ -11,15 +11,15 @@ import UIKit
 class GenreCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Views
-    var label: UILabel!
-    var lip: UIView!
+    var label: UILabel?
+    var lip: UIView?
 
     
     // MARK: - Properties
     static let identifier = String(describing: GenreCollectionViewCell.self)
     var genre: AlbumGenre? {
         didSet {
-            label.text = genre?.rawValue.capitalized
+            label?.text = genre?.rawValue.capitalized
         }
     }
     override var isSelected: Bool {
@@ -28,8 +28,8 @@ class GenreCollectionViewCell: UICollectionViewCell {
     
                 guard let self = self else { return }
                 
-                self.label.font = self.isSelected ? .systemFont(ofSize: 16, weight: .semibold) : .systemFont(ofSize: 16, weight: .medium)
-                self.label.textColor = self.isSelected ? .NBlack : .NGray
+                self.label?.font = self.isSelected ? .systemFont(ofSize: 16, weight: .semibold) : .systemFont(ofSize: 16, weight: .medium)
+                self.label?.textColor = self.isSelected ? .NBlack : .NGray
             }
         }
     }
@@ -50,7 +50,7 @@ class GenreCollectionViewCell: UICollectionViewCell {
     private func setupLabel() {
         // Label
         label = NLabel(title: "Genre", font: .systemFont(ofSize: 16, weight: .medium), textColor: .NSilver)
-        label.centerIn(superview: self)
+        label?.centerIn(superview: self)
     }
 
     public func addSeparatorLine() {

@@ -13,10 +13,6 @@ protocol ViewModelDelegate: AnyObject {
     func stopActivityIndicator()
 }
 
-//protocol ImageDelegate: AnyObject {
-//    func displayLargeImage()
-//}
-
 class ViewModel {
 
     // MARK: - Variables
