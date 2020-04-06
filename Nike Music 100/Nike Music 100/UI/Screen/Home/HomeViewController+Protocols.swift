@@ -128,4 +128,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         // Push
         navigationController?.pushViewController(detailViewController, animated: true)
     }
+
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        // Reset cell's image
+        guard let cell = cell as? AlbumTableViewCell else { return }
+        cell.albumImageView?.image = nil
+    }
 }
