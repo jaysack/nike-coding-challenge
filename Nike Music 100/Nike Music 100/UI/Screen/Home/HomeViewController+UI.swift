@@ -24,7 +24,7 @@ extension HomeViewController {
         guard let mainStackView = mainStackView else { return }
         view.addSubview(mainStackView)
         mainStackView.setConstraint(topAnchor: view.topAnchor,
-                                    topConstant: UIApplication.shared.statusBarFrame.size.height ?? 0,
+                                    topConstant: UIApplication.shared.statusBarFrame.size.height,
                                     bottomAnchor: view.bottomAnchor,
                                     leadingAnchor: view.leadingAnchor,
                                     trailingAnchor: view.trailingAnchor)
@@ -69,7 +69,7 @@ extension HomeViewController {
         guard let curtainView = curtainView else { return }
         view.addSubview(curtainView)
         curtainView.setConstraint(topAnchor: view.topAnchor,
-                                  topConstant: UIApplication.shared.statusBarFrame.size.height ?? 0,
+                                  topConstant: UIApplication.shared.statusBarFrame.size.height,
                                   bottomAnchor: view.bottomAnchor,
                                   leadingAnchor: view.leadingAnchor,
                                   trailingAnchor: view.trailingAnchor)
