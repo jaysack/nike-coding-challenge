@@ -8,6 +8,8 @@
 The Sample app was developed using Swift in just under 24 hours.
 About a couple of those 24 hours were dedicated to an extensive UX/UI research to match Nike's branding as observed in their current AppStore apps
 
+**UPDATE:** I was actually told to disregard the time restriction, so I worked a little bit more on the sample app to clean and refactor code
+
 ### 1.3. Issues
 - Althought one of the requierements for this challenge was presenting all possible **genres** of music, it seems the RSS Feed Generator currently only support *all genres* and *country music*. 
 - Though, this feature is **fully functional on physical devices**, it is not possible to open Itunes from the sample App **on iOS simulators** (They do not have it pre-installed)
