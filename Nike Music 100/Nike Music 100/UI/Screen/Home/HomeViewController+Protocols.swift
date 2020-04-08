@@ -111,12 +111,18 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         if viewModel.showAlternativeDesign ?? false {
 
             // Config. VC
-            let detailAlternativeViewController = DetailAlternativeAlbumViewController()
-            detailAlternativeViewController.viewModel = viewModel
-            detailAlternativeViewController.albumIndex = indexPath.row
+            let detailViewController = DetailAlternativeAlbumViewController()
+            detailViewController.viewModel = viewModel
+            detailViewController.albumIndex = indexPath.row
 
-            // Push View Controller
-            navigationController?.pushViewController(detailAlternativeViewController, animated: true)
+            // Config. Page Controller
+            let pageViewController = DetailAlternativePageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+            pageViewController.viewModel = viewModel
+            pageViewController.currentAlbumIndex = indexPath.row
+            pageViewController.setViewControllers([detailViewController], direction: .forward, animated: false)
+
+            // Push Page Controller
+            navigationController?.pushViewController(pageViewController, animated: true)
             return
         }
 

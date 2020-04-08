@@ -9,7 +9,9 @@ The Sample app was developed using Swift in just under 24 hours.
 About a couple of those 24 hours were dedicated to an extensive UX/UI research to match Nike's branding as observed in their current AppStore apps
 
 ### 1.3. Issues
-Althought one of the requierements for this challenge was presenting all possible **genres** of music, it seems the RSS Feed Generator currently only support *all genres* and *country music*. 
+- Althought one of the requierements for this challenge was presenting all possible **genres** of music, it seems the RSS Feed Generator currently only support *all genres* and *country music*. 
+- Though, this feature is **fully functional on physical devices**, it is not possible to open Itunes from the sample App **on iOS simulators** (They do not have it pre-installed)
+
 
 ## 2. Requirements
 - Create a sample iPhone app that displays the top 100 albums across all genres using Apple’s RSS generator
@@ -57,15 +59,6 @@ At launch, users can switch to the alternative design as needed
 <br>
 <br>
 
-
-## 4. Discussion
-With more development time, the items below would be implemented next (there's just so much lines one can code in just 24 hours).
-
-The following items would be developed/implemented next:
-- Integrating `CoreData` to limit network usage and save already fetched albums
-- using a `UIPageViewController` to swipe between albums in `DetailAlternativeViewController`
-- adding a `UIGestureRecognizer` allowing users to dismiss the screen by simply swiping down (in Detail View Controller)
-- adding a *Throttler* in `HomeViewController` to limit unnecessary network requests in case users scroll fast
 
 
 ## 5. Any Thoughts?

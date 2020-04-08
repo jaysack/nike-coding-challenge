@@ -36,6 +36,7 @@
 		E617ADEB24379BAD009D91BF /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADEA24379BAD009D91BF /* UILabel+Extension.swift */; };
 		E617ADF024379CA7009D91BF /* DetailAlternativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADEF24379CA7009D91BF /* DetailAlternativeViewController.swift */; };
 		E617ADF224379CCC009D91BF /* DetailAlternativeViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E617ADF124379CCC009D91BF /* DetailAlternativeViewController+UI.swift */; };
+		E6DAF3C4243BE801005C02FE /* DetailAlternativePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DAF3C3243BE801005C02FE /* DetailAlternativePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		E617ADEA24379BAD009D91BF /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		E617ADEF24379CA7009D91BF /* DetailAlternativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlternativeViewController.swift; sourceTree = "<group>"; };
 		E617ADF124379CCC009D91BF /* DetailAlternativeViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailAlternativeViewController+UI.swift"; sourceTree = "<group>"; };
+		E6DAF3C3243BE801005C02FE /* DetailAlternativePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlternativePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 		E617ADEE24379C7E009D91BF /* Alternative */ = {
 			isa = PBXGroup;
 			children = (
+				E6DAF3C3243BE801005C02FE /* DetailAlternativePageViewController.swift */,
 				E617ADEF24379CA7009D91BF /* DetailAlternativeViewController.swift */,
 				E617ADF124379CCC009D91BF /* DetailAlternativeViewController+UI.swift */,
 			);
@@ -348,6 +351,7 @@
 				E617ADE924378EC8009D91BF /* SelectionViewController.swift in Sources */,
 				E617ADBF243635DC009D91BF /* URLRequest+Extension.swift in Sources */,
 				E60414CD2438F3A6008FEF24 /* UIStackView+Extension.swift in Sources */,
+				E6DAF3C4243BE801005C02FE /* DetailAlternativePageViewController.swift in Sources */,
 				E617ADD0243653E9009D91BF /* HomeViewController+UI.swift in Sources */,
 				E617ADD42436833B009D91BF /* AlbumTableViewCell.swift in Sources */,
 				E617ADC8243642FB009D91BF /* UIColor+Extension.swift in Sources */,
