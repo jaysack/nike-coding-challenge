@@ -13,7 +13,7 @@ extension URLRequest {
     init?(for albumType: AlbumGenre, albumCount: Int) {
         
         // Check endpoint
-        let urlString = "https://rss.itunes.apple.com/api/v1/us/itunes-music/top-albums/\(albumType.rawValue)/\(albumCount)/explicit.json"
+        let urlString = "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/\(albumType.rawValue)/\(albumCount)/explicit.json"
         guard let url = URL(string: urlString) else {
             print("🌐 - Network call cancelled: Endpoint not valid ❌")
             return nil
